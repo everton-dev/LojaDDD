@@ -78,17 +78,17 @@
     <None Include="Stored Procedures\Read\PROC_S_SEGMENTO.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Stored Procedures\Create\PROC_I_CATEGORIA.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_CLIENTE.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_COR.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_FORNECEDOR.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_GRADE_PRODUTO.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_MARCA.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_PEDIDO.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_PEDIDO_STATUS.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_PRODUTO.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_PRODUTO_ITEM.sql" />
-    <Build Include="Stored Procedures\Create\PROC_I_SEGMENTO.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_CATEGORIA.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_CLIENTE.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_COR.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_FORNECEDOR.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_GRADE_PRODUTO.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_MARCA.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_PEDIDO.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_PEDIDO_STATUS.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_PRODUTO.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_PRODUTO_ITEM.sql" />
+    <None Include="Stored Procedures\Create\PROC_I_SEGMENTO.sql" />
     <Build Include="Stored Procedures\Delete\PROC_D_CATEGORIA.sql" />
     <Build Include="Stored Procedures\Delete\PROC_D_CLIENTE.sql" />
     <Build Include="Stored Procedures\Delete\PROC_D_COR.sql" />
