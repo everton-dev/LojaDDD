@@ -1,1 +1,29 @@
-﻿
+﻿USE ESTOQUE
+GO
+
+IF OBJECT_ID('dbo.PROC_D_SEGMENTO') IS NOT NULL
+BEGIN
+	DROP PROCEDURE dbo.PROC_D_SEGMENTO
+	PRINT '<< DROP PROCEDURE dbo.PROC_D_SEGMENTO >>'
+END
+GO
+
+CREATE PROCEDURE dbo.PROC_D_SEGMENTO
+	  @IdMarca					INT
+	, @IdCategoria				INT
+	, @IdSegmento				INT
+AS
+BEGIN
+	DELETE FROM dbo.Segmento
+	WHERE 
+			IdMarca = @IdMarca
+		AND IdCategoria = @IdCategoria
+		AND IdSegmento = @IdSegmento
+END
+GO
+
+IF OBJECT_ID('dbo.PROC_D_SEGMENTO') IS NOT NULL
+BEGIN
+	PRINT '<< CREATE PROCEDURE dbo.PROC_D_SEGMENTO >>'
+END
+GO

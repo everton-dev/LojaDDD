@@ -1,1 +1,30 @@
-﻿
+﻿USE ESTOQUE
+GO
+
+IF OBJECT_ID('dbo.PROC_S_SEGMENTO') IS NOT NULL
+BEGIN
+	DROP PROCEDURE dbo.PROC_S_SEGMENTO
+	PRINT '<< DROP PROCEDURE dbo.PROC_S_SEGMENTO >>'
+END
+GO
+
+CREATE PROCEDURE dbo.PROC_S_SEGMENTO
+	  @IdMarca					INT	= NULL
+	, @IdCategoria				INT	= NULL
+	, @IdSegmento				INT	= NULL
+AS
+BEGIN
+	SELECT *
+	FROM dbo.Segmento
+	WHERE 
+			((@IdMarca IS NULL) OR (IdMarca = @IdMarca))
+		AND ((@IdCategoria IS NULL) OR (IdCategoria = @IdCategoria))
+		AND ((@IdSegmento IS NULL) OR (IdSegmento = @IdSegmento))
+END
+GO
+
+IF OBJECT_ID('dbo.PROC_S_SEGMENTO') IS NOT NULL
+BEGIN
+	PRINT '<< CREATE PROCEDURE dbo.PROC_S_SEGMENTO >>'
+END
+GO
