@@ -9,8 +9,7 @@ END
 GO
 
 CREATE PROCEDURE dbo.PROC_I_MARCA
-	  @IdMarca					INT
-	, @Descricao				VARCHAR(100)
+	  @Descricao				VARCHAR(100)
 	, @Ativo					BIT
 	, @UsuarioCriacao			VARCHAR(50)
 	, @DataCriacao				DATETIME
@@ -20,8 +19,7 @@ AS
 BEGIN
 	INSERT INTO dbo.Marca
 	(
-		  IdMarca
-		, Descricao
+		  Descricao
 		, Ativo
 		, UsuarioCriacao
 		, DataCriacao
@@ -30,8 +28,7 @@ BEGIN
 	)
 	VALUES
 	(
-		  @IdMarca
-		, @Descricao
+		  @Descricao
 		, @Ativo
 		, @UsuarioCriacao
 		, @DataCriacao

@@ -76,7 +76,7 @@ namespace Estoque.Application.Test.Configuration
             services.AddScoped<IPedidoRepository, PedidoRepository>();
             services.AddScoped<IPedidoStatusRepository, PedidoStatusRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
-            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IProdutoItemRepository, ProdutoItemRepository>();
             services.AddScoped<ISegmentoRepository, SegmentoRepository>();
         }
     }

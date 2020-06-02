@@ -1,4 +1,4 @@
-using Estoque.Application.Interfaces.Application;
+﻿using Estoque.Application.Interfaces.Application;
 using Estoque.Application.Test.Configuration;
 using Estoque.Entities.Views;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,31 +7,33 @@ using Xunit;
 
 namespace Estoque.Application.Test.AppServices
 {
-    public class CategoriaAppServiceTest : IClassFixture<TestStartup>
+    public class CorAppServiceTest : IClassFixture<TestStartup>
     {
         private ServiceProvider _serviceProvide;
-        private readonly ICategoriaApplication _categoriaApplication;
+        private readonly ICorApplication _CorApplication;
 
-        public CategoriaAppServiceTest(TestStartup configuration)
+        public CorAppServiceTest(TestStartup configuration)
         {
             _serviceProvide = configuration.ServiceProvider;
-            _categoriaApplication = _serviceProvide.GetService<ICategoriaApplication>();
+            _CorApplication = _serviceProvide.GetService<ICorApplication>();
         }
 
         [Fact]
         public void AdicionarTeste()
         {
-            CategoriaView input = new CategoriaView();
+            CorView input = new CorView();
 
             input.IdMarca = 1;
-            input.Descricao = "Pijamas";
+            input.IdCategoria = 1;
+            input.IdSegmento = 2;
+            input.Descricao = "Rosa";
             input.Ativo = true;
             input.UsuarioCriacao = "ebenedicto";
             input.DataCriacao = DateTime.Now;
             input.UsuarioAtualizacao = null;
             input.DataAtualizacao = null;
 
-            _categoriaApplication.Inserir(input);
+            _CorApplication.Inserir(input);
         }
     }
 }

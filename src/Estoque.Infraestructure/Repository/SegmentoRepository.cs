@@ -43,7 +43,6 @@ namespace Estoque.Infraestructure.Repository
 
             p.AddDefault("@IdMarca", input.IdMarca);
             p.AddDefault("@IdCategoria", input.IdCategoria);
-            p.AddDefault("@IdSegmento", input.IdSegmento);
             p.AddDefault("@Descricao", input.Descricao);
             p.AddAtivo(input.Ativo);
             p.AddUsuarioCriacao(input.UsuarioCriacao);
