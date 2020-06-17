@@ -7,34 +7,32 @@ using Xunit;
 
 namespace Estoque.Application.Test.AppServices
 {
-    public class CorAppServiceTest : IClassFixture<TestStartup>
+    public class FornecedorAppServiceTest : IClassFixture<TestStartup>
     {
         private ServiceProvider _serviceProvide;
-        private readonly ICorApplication _CorApplication;
+        private readonly IFornecedorApplication _FornecedorApplication;
 
-        public CorAppServiceTest(TestStartup configuration)
+        public FornecedorAppServiceTest(TestStartup configuration)
         {
             _serviceProvide = configuration.ServiceProvider;
-            _CorApplication = _serviceProvide.GetService<ICorApplication>();
+            _FornecedorApplication = _serviceProvide.GetService<IFornecedorApplication>();
         }
-
 
         [Fact]
         public void AdicionarTeste()
         {
-            CorView input = new CorView();
+            FornecedorView input = new FornecedorView();
 
-            input.IdMarca = 1;
-            input.IdCategoria = 1;
-            input.IdSegmento = 2;
-            input.Descricao = "Rosa";
+            input.Cnpj = "";
+            input.RazaoSocial = "";
+            input.Telefone = "";
             input.Ativo = true;
             input.UsuarioCriacao = "ebenedicto";
             input.DataCriacao = DateTime.Now;
             input.UsuarioAtualizacao = null;
             input.DataAtualizacao = null;
 
-            _CorApplication.Inserir(input);
+            _FornecedorApplication.Inserir(input);
         }
     }
 }
